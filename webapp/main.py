@@ -4,6 +4,11 @@ from typing import List
 app = FastAPI()
 
 
+@app.get("/")
+def read_root():
+    return {"hello": "world"}
+
+
 class ConnectionManager:
 
     def __init__(self):
